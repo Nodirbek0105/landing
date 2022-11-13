@@ -1,0 +1,106 @@
+.header {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        li {
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: #000;
+                text-transform: uppercase;
+            }
+        }
+    }
+    // hamburger
+    @media (max-width:768px) {
+        display: flex;
+        align-items: center;
+        width: 1005;
+        justify-content: space-between;
+        .headers-search-div {
+            position: absolute;
+            display: none;
+        }
+        * {
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"]:checked + .menu + .navbar ul {
+            transform: translateX(0);
+            background-color: #fff;
+            transition: .5s ease;
+        }
+        ul {
+            display: flex;
+            gap: 10px;
+            background-color: #fff;
+            width: 110px;
+            @media (max-width:768px) {
+                flex-direction: column;
+                gap: 20px;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                position: fixed;
+                align-items: center;
+                transform: translateX(-200%);
+                background-color: white;
+            }
+
+        li {
+            a{
+                color: #000;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            list-style: none;
+            color: #000;
+            text-decoration: none;
+            top: 52px;
+            position: relative;
+        }
+        }
+    }
+}
+
+
+
+input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.menu {
+    @media (max-width:768px) {
+        &::after ,
+        &::before {
+            content: "";
+            width: 20px;
+            height: 3px;
+            display: block;
+            margin-bottom: 5px;
+            background-color: #000;
+            position: sticky;
+        } 
+    }
+}
+
+// hamburger
+
+.headers-search-div {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}

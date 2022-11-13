@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container {
+    position:relative;
+    width:1200px;
+    margin: 100px auto;
+    @media (max-width:768px) {
+        width:750px;
+        
+    }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
